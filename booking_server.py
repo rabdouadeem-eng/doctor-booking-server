@@ -3,7 +3,7 @@ import re
 import time
 import logging
 import requests
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 from collections import defaultdict
 
@@ -97,6 +97,10 @@ def send_telegram_notification(clean_data):
         return False
 
 # ============ ROUTES ============
+@app.route("/")
+def home():
+    return send_from_directory(os.path.dirname(os.path.abspath(__file__)), "index.html")
+
 @app.route("/api/booking", methods=["POST"])
 def booking():
     # 1) Rate limiting بالـ IP
