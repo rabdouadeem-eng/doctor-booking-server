@@ -1,0 +1,2014 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Professional private medical clinic - Quality healthcare services">
+<title>Dr. [Name] - Private Clinic</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cairo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ===========================
+   CSS Variables & Reset
+   =========================== */
+:root {
+  --primary: #0891b2;
+  --primary-dark: #0e7490;
+  --primary-light: #cffafe;
+  --accent: #06b6d4;
+  --text-dark: #1e293b;
+  --text-medium: #475569;
+  --text-light: #64748b;
+  --bg-white: #ffffff;
+  --bg-light: #f8fafc;
+  --bg-soft: #f1f5f9;
+  --border: #e2e8f0;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+  --shadow-lg: 0 10px 25px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+  --radius: 12px;
+  --radius-sm: 8px;
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-dark);
+  background: var(--bg-white);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+body[dir="rtl"] {
+  font-family: 'Cairo', 'Inter', sans-serif;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* ===========================
+   Layout & Container
+   =========================== */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+section {
+  padding: 5rem 0;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 3.5rem;
+}
+
+.section-tag {
+  display: inline-block;
+  background: var(--primary-light);
+  color: var(--primary-dark);
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.section-title {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.section-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-medium);
+}
+
+/* ===========================
+   Navigation
+   =========================== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 1000;
+  border-bottom: 1px solid var(--border);
+  transition: var(--transition);
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--primary-dark);
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-link {
+  color: var(--text-medium);
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: var(--transition);
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--primary-dark);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  transition: var(--transition);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.lang-toggle {
+  background: var(--bg-soft);
+  color: var(--text-dark);
+  padding: 0.5rem 0.9rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.lang-toggle:hover {
+  background: var(--primary-light);
+  color: var(--primary-dark);
+}
+
+.nav-cta {
+  background: var(--primary);
+  color: white;
+  padding: 0.6rem 1.25rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.nav-cta:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.mobile-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0.5rem;
+}
+
+.mobile-toggle span {
+  width: 25px;
+  height: 2px;
+  background: var(--text-dark);
+  transition: var(--transition);
+  border-radius: 2px;
+}
+
+.mobile-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.mobile-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ===========================
+   Hero Section
+   =========================== */
+.hero {
+  padding-top: 7rem;
+  padding-bottom: 5rem;
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 50%, #ffffff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(8, 145, 178, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content .badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: white;
+  color: var(--primary-dark);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.hero-content .badge::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: #10b981;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.2); }
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+}
+
+.hero h1 .highlight {
+  color: var(--primary-dark);
+  position: relative;
+}
+
+.hero-specialty {
+  font-size: 1.25rem;
+  color: var(--primary);
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+
+.hero-desc {
+  font-size: 1.05rem;
+  color: var(--text-medium);
+  margin-bottom: 2rem;
+  max-width: 500px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.95rem 1.75rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  box-shadow: 0 4px 14px rgba(8, 145, 178, 0.3);
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(8, 145, 178, 0.4);
+}
+
+.btn-secondary {
+  background: white;
+  color: var(--text-dark);
+  border: 1.5px solid var(--border);
+}
+
+.btn-secondary:hover {
+  border-color: var(--primary);
+  color: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+.hero-stats {
+  display: flex;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-number {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin-top: 0.25rem;
+}
+
+.hero-image {
+  position: relative;
+}
+
+.doctor-photo {
+  width: 100%;
+  aspect-ratio: 4/5;
+  background: linear-gradient(135deg, var(--primary-light), #dbeafe);
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.doctor-photo::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(circle at 30% 20%, rgba(255,255,255,0.6) 0%, transparent 50%),
+    radial-gradient(circle at 70% 80%, rgba(8, 145, 178, 0.2) 0%, transparent 50%);
+}
+
+.doctor-photo-icon {
+  font-size: 8rem;
+  color: var(--primary);
+  opacity: 0.4;
+  z-index: 1;
+}
+
+.floating-card {
+  position: absolute;
+  background: white;
+  padding: 1rem 1.25rem;
+  border-radius: 14px;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  z-index: 2;
+}
+
+.floating-card-1 {
+  top: 20%;
+  left: -30px;
+  animation: float 4s ease-in-out infinite;
+}
+
+.floating-card-2 {
+  bottom: 15%;
+  right: -20px;
+  animation: float 4s ease-in-out infinite 2s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.floating-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--primary-light);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-dark);
+  font-size: 1.2rem;
+}
+
+.floating-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.floating-text strong {
+  font-size: 0.9rem;
+  color: var(--text-dark);
+}
+
+.floating-text span {
+  font-size: 0.75rem;
+  color: var(--text-light);
+}
+
+/* ===========================
+   About Section
+   =========================== */
+.about {
+  background: white;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.about-image {
+  position: relative;
+}
+
+.about-img {
+  width: 100%;
+  aspect-ratio: 1;
+  background: linear-gradient(135deg, #cffafe, #dbeafe);
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-img::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 200px;
+  height: 200px;
+  background: var(--primary);
+  border-radius: 24px;
+  z-index: -1;
+  opacity: 0.1;
+}
+
+.about-img-icon {
+  font-size: 6rem;
+  color: var(--primary);
+  opacity: 0.5;
+}
+
+.experience-badge {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  background: var(--primary);
+  color: white;
+  padding: 1.25rem;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+}
+
+.experience-badge .number {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.experience-badge .label {
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+}
+
+.about-content h2 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  line-height: 1.2;
+}
+
+.about-content > p {
+  color: var(--text-medium);
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+}
+
+.qualifications {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.qual-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: var(--bg-light);
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+}
+
+.qual-item:hover {
+  background: var(--primary-light);
+  transform: translateX(5px);
+}
+
+body[dir="rtl"] .qual-item:hover {
+  transform: translateX(-5px);
+}
+
+.qual-icon {
+  width: 36px;
+  height: 36px;
+  background: var(--primary);
+  color: white;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 0.9rem;
+}
+
+.qual-text strong {
+  display: block;
+  color: var(--text-dark);
+  font-size: 0.95rem;
+  margin-bottom: 0.15rem;
+}
+
+.qual-text span {
+  color: var(--text-light);
+  font-size: 0.85rem;
+}
+
+/* ===========================
+   Services Section
+   =========================== */
+.services {
+  background: var(--bg-light);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.service-card {
+  background: white;
+  padding: 2rem;
+  border-radius: var(--radius);
+  transition: var(--transition);
+  border: 1px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+body[dir="rtl"] .service-card::before {
+  transform-origin: right;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-light);
+}
+
+.service-card:hover::before {
+  transform: scaleX(1);
+}
+
+.service-icon {
+  width: 60px;
+  height: 60px;
+  background: var(--primary-light);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  color: var(--primary-dark);
+  margin-bottom: 1.25rem;
+  transition: var(--transition);
+}
+
+.service-card:hover .service-icon {
+  background: var(--primary);
+  color: white;
+  transform: scale(1.05);
+}
+
+.service-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--text-dark);
+}
+
+.service-card p {
+  color: var(--text-medium);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ===========================
+   Hours & Location
+   =========================== */
+.hours-location {
+  background: white;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 2.5rem;
+}
+
+.info-card {
+  background: var(--bg-light);
+  padding: 2.5rem;
+  border-radius: var(--radius);
+}
+
+.info-card h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--text-dark);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.info-card h3 .icon {
+  width: 40px;
+  height: 40px;
+  background: var(--primary);
+  color: white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.address {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.address-icon {
+  color: var(--primary);
+  font-size: 1.25rem;
+  margin-top: 0.2rem;
+}
+
+.address-text strong {
+  display: block;
+  color: var(--text-dark);
+  margin-bottom: 0.25rem;
+}
+
+.address-text span {
+  color: var(--text-medium);
+  font-size: 0.95rem;
+}
+
+.hours-table {
+  width: 100%;
+}
+
+.hours-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.hours-row:last-child {
+  border-bottom: none;
+}
+
+.hours-row .day {
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+.hours-row .time {
+  color: var(--text-medium);
+  font-size: 0.95rem;
+}
+
+.hours-row.closed .time {
+  color: #dc2626;
+  font-weight: 500;
+}
+
+.hours-row.today {
+  background: var(--primary-light);
+  padding: 0.85rem 1rem;
+  border-radius: 8px;
+  margin: 0.25rem 0;
+}
+
+.map-placeholder {
+  background: linear-gradient(135deg, #cffafe, #dbeafe);
+  border-radius: var(--radius);
+  height: 100%;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.map-placeholder::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(8, 145, 178, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(8, 145, 178, 0.1) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+.map-pin {
+  width: 60px;
+  height: 60px;
+  background: var(--primary);
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+  box-shadow: var(--shadow-md);
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: rotate(-45deg) translateY(0); }
+  50% { transform: rotate(-45deg) translateY(-10px); }
+}
+
+.map-text {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+/* ===========================
+   Testimonials
+   =========================== */
+.testimonials {
+  background: var(--bg-light);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.testimonial-card {
+  background: white;
+  padding: 2rem;
+  border-radius: var(--radius);
+  position: relative;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.quote-icon {
+  font-size: 3rem;
+  color: var(--primary-light);
+  line-height: 1;
+  font-family: Georgia, serif;
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  opacity: 0.5;
+}
+
+body[dir="rtl"] .quote-icon {
+  right: auto;
+  left: 1.5rem;
+}
+
+.stars {
+  color: #fbbf24;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  letter-spacing: 2px;
+}
+
+.testimonial-text {
+  color: var(--text-medium);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.author-avatar {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.author-info strong {
+  display: block;
+  color: var(--text-dark);
+  font-size: 0.95rem;
+}
+
+.author-info span {
+  color: var(--text-light);
+  font-size: 0.85rem;
+}
+
+/* ===========================
+   Contact Form
+   =========================== */
+.contact {
+  background: white;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 3rem;
+}
+
+.contact-info h2 {
+  font-size: clamp(1.8rem, 4vw, 2.3rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.contact-info > p {
+  color: var(--text-medium);
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+}
+
+.contact-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.contact-method {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--bg-light);
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+}
+
+.contact-method:hover {
+  background: var(--primary-light);
+  transform: translateX(5px);
+}
+
+body[dir="rtl"] .contact-method:hover {
+  transform: translateX(-5px);
+}
+
+.method-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--primary);
+  color: white;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.method-text strong {
+  display: block;
+  color: var(--text-dark);
+  font-size: 0.95rem;
+  margin-bottom: 0.15rem;
+}
+
+.method-text span {
+  color: var(--text-medium);
+  font-size: 0.9rem;
+}
+
+.booking-form {
+  background: var(--bg-light);
+  padding: 2.5rem;
+  border-radius: var(--radius);
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-group label {
+  display: block;
+  color: var(--text-dark);
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-size: 0.95rem;
+  background: white;
+  color: var(--text-dark);
+  transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(8, 145, 178, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-submit {
+  width: 100%;
+  padding: 1rem;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.form-submit:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(8, 145, 178, 0.3);
+}
+
+.form-success {
+  display: none;
+  background: #d1fae5;
+  color: #065f46;
+  padding: 1rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.form-success.show {
+  display: block;
+  animation: slideDown 0.4s ease;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===========================
+   Footer
+   =========================== */
+.footer {
+  background: #0f172a;
+  color: #cbd5e1;
+  padding: 4rem 0 1.5rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.2fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.footer-brand .logo {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.footer-brand p {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  max-width: 320px;
+}
+
+.social-links {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: var(--transition);
+}
+
+.social-link:hover {
+  background: var(--primary);
+  transform: translateY(-3px);
+}
+
+.footer-col h4 {
+  color: white;
+  font-size: 1.05rem;
+  margin-bottom: 1.25rem;
+  font-weight: 600;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-col a {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+
+.footer-col a:hover {
+  color: var(--primary);
+  padding-left: 5px;
+}
+
+body[dir="rtl"] .footer-col a:hover {
+  padding-left: 0;
+  padding-right: 5px;
+}
+
+.footer-contact-item {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  color: #94a3b8;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.footer-contact-item .icon {
+  color: var(--primary);
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.5rem;
+  text-align: center;
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+/* ===========================
+   Scroll to top button
+   =========================== */
+.scroll-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 50px;
+  height: 50px;
+  background: var(--primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  box-shadow: var(--shadow-lg);
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+  z-index: 999;
+}
+
+body[dir="rtl"] .scroll-top {
+  right: auto;
+  left: 2rem;
+}
+
+.scroll-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scroll-top:hover {
+  background: var(--primary-dark);
+  transform: translateY(-3px);
+}
+
+/* ===========================
+   Animations
+   =========================== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===========================
+   Responsive
+   =========================== */
+@media (max-width: 968px) {
+  .hero-grid,
+  .about-grid,
+  .info-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .floating-card-1 {
+    left: 10px;
+  }
+
+  .floating-card-2 {
+    right: 10px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-toggle {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1.5rem;
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-150%);
+    transition: var(--transition);
+    border-top: 1px solid var(--border);
+  }
+
+  .nav-menu.active {
+    transform: translateY(0);
+  }
+
+  .nav-actions {
+    gap: 0.5rem;
+  }
+
+  .nav-cta {
+    display: none;
+  }
+
+  section {
+    padding: 3.5rem 0;
+  }
+
+  .qualifications {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-stats {
+    gap: 1.5rem;
+  }
+
+  .floating-card {
+    padding: 0.75rem 1rem;
+  }
+
+  .floating-card-1 {
+    top: 10%;
+  }
+
+  .floating-card-2 {
+    bottom: 10%;
+  }
+}
+
+@media (max-width: 540px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .booking-form,
+  .info-card {
+    padding: 1.5rem;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="#home" class="logo">
+      <div class="logo-icon">+</div>
+      <span data-en="MediCare" data-ar="ميديكير">MediCare</span>
+    </a>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#home" class="nav-link" data-en="Home" data-ar="الرئيسية">Home</a></li>
+      <li><a href="#about" class="nav-link" data-en="About" data-ar="عن الدكتور">About</a></li>
+      <li><a href="#services" class="nav-link" data-en="Services" data-ar="الخدمات">Services</a></li>
+      <li><a href="#hours" class="nav-link" data-en="Hours" data-ar="المواعيد">Hours</a></li>
+      <li><a href="#testimonials" class="nav-link" data-en="Reviews" data-ar="آراء المرضى">Reviews</a></li>
+      <li><a href="#contact" class="nav-link" data-en="Contact" data-ar="تواصل">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="lang-toggle" id="langToggle" aria-label="Toggle language">عربي</button>
+      <a href="#contact" class="nav-cta" data-en="Book Now" data-ar="احجز الآن">Book Now</a>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <span class="badge" data-en="Now Accepting New Patients" data-ar="نقبل مرضى جدد الآن">Now Accepting New Patients</span>
+        <h1 data-en="Dr. [Name]" data-ar="د. [الاسم]">Dr. [Name]</h1>
+        <p class="hero-specialty" data-en="Board-Certified Internal Medicine Specialist" data-ar="أخصائي الطب الباطني المعتمد">Board-Certified Internal Medicine Specialist</p>
+        <p class="hero-desc" data-en="Providing compassionate, evidence-based medical care with over 15 years of experience. Your health and well-being are my top priorities." data-ar="تقديم رعاية طبية رحمة وقائمة على الأدلة مع أكثر من 15 عامًا من الخبرة. صحتك ورفاهيتك هما أولويتي القصوى.">Providing compassionate, evidence-based medical care with over 15 years of experience. Your health and well-being are my top priorities.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary" data-en="Book Appointment →" data-ar="← احجز موعد">Book Appointment →</a>
+          <a href="#services" class="btn btn-secondary" data-en="View Services" data-ar="عرض الخدمات">View Services</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number">15+</span>
+            <span class="stat-label" data-en="Years Experience" data-ar="سنوات خبرة">Years Experience</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">10K+</span>
+            <span class="stat-label" data-en="Happy Patients" data-ar="مريض سعيد">Happy Patients</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">4.9</span>
+            <span class="stat-label" data-en="Patient Rating" data-ar="تقييم المرضى">Patient Rating</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="doctor-photo">
+          <div class="doctor-photo-icon">👨‍⚕️</div>
+        </div>
+        <div class="floating-card floating-card-1">
+          <div class="floating-icon">✓</div>
+          <div class="floating-text">
+            <strong data-en="Verified Doctor" data-ar="طبيب معتمد">Verified Doctor</strong>
+            <span data-en="Board Certified" data-ar="شهادة البورد">Board Certified</span>
+          </div>
+        </div>
+        <div class="floating-card floating-card-2">
+          <div class="floating-icon">★</div>
+          <div class="floating-text">
+            <strong>4.9 / 5.0</strong>
+            <span data-en="Patient Reviews" data-ar="تقييمات المرضى">Patient Reviews</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image fade-in">
+        <div class="about-img">
+          <div class="about-img-icon">🩺</div>
+        </div>
+        <div class="experience-badge">
+          <div class="number">15+</div>
+          <div class="label" data-en="Years" data-ar="سنوات">Years</div>
+        </div>
+      </div>
+      <div class="about-content fade-in">
+        <span class="section-tag" data-en="About the Doctor" data-ar="عن الطبيب">About the Doctor</span>
+        <h2 data-en="Dedicated to Your Health & Well-being" data-ar="ملتزم بصحتك ورفاهيتك">Dedicated to Your Health & Well-being</h2>
+        <p data-en="Dr. [Name] is a highly respected internal medicine specialist with extensive experience in diagnosing and treating a wide range of medical conditions. With a patient-centered approach and commitment to staying at the forefront of medical advances, Dr. [Name] provides personalized care tailored to each patient's unique needs." data-ar="د. [الاسم] أخصائي طب باطني يحظى باحترام كبير ولديه خبرة واسعة في تشخيص وعلاج مجموعة واسعة من الحالات الطبية. مع نهج يركز على المريض والالتزام بالبقاء في طليعة التطورات الطبية، يقدم د. [الاسم] رعاية شخصية مصممة لتلبية الاحتياجات الفريدة لكل مريض.">Dr. [Name] is a highly respected internal medicine specialist with extensive experience in diagnosing and treating a wide range of medical conditions. With a patient-centered approach and commitment to staying at the forefront of medical advances, Dr. [Name] provides personalized care tailored to each patient's unique needs.</p>
+        <div class="qualifications">
+          <div class="qual-item">
+            <div class="qual-icon">🎓</div>
+            <div class="qual-text">
+              <strong>MD, Internal Medicine</strong>
+              <span data-en="Harvard Medical School" data-ar="كلية الطب بجامعة هارفارد">Harvard Medical School</span>
+            </div>
+          </div>
+          <div class="qual-item">
+            <div class="qual-icon">🏆</div>
+            <div class="qual-text">
+              <strong data-en="Board Certified" data-ar="شهادة البورد">Board Certified</strong>
+              <span data-en="American Board" data-ar="البورد الأمريكي">American Board</span>
+            </div>
+          </div>
+          <div class="qual-item">
+            <div class="qual-icon">🔬</div>
+            <div class="qual-text">
+              <strong data-en="Research Published" data-ar="أبحاث منشورة">Research Published</strong>
+              <span data-en="20+ Medical Journals" data-ar="أكثر من 20 مجلة طبية">20+ Medical Journals</span>
+            </div>
+          </div>
+          <div class="qual-item">
+            <div class="qual-icon">👥</div>
+            <div class="qual-text">
+              <strong data-en="Member" data-ar="عضو">Member</strong>
+              <span data-en="AMA & Medical Society" data-ar="الجمعية الطبية الأمريكية">AMA & Medical Society</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag" data-en="Our Services" data-ar="خدماتنا">Our Services</span>
+      <h2 class="section-title" data-en="Comprehensive Medical Care" data-ar="رعاية طبية شاملة">Comprehensive Medical Care</h2>
+      <p class="section-subtitle" data-en="A full range of medical services designed to keep you healthy at every stage of life." data-ar="مجموعة كاملة من الخدمات الطبية المصممة لإبقائك بصحة جيدة في كل مرحلة من مراحل الحياة.">A full range of medical services designed to keep you healthy at every stage of life.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card fade-in">
+        <div class="service-icon">🩺</div>
+        <h3 data-en="General Consultation" data-ar="الاستشارة العامة">General Consultation</h3>
+        <p data-en="Comprehensive medical consultations for diagnosis, treatment plans, and health advice." data-ar="استشارات طبية شاملة للتشخيص وخطط العلاج والنصائح الصحية.">Comprehensive medical consultations for diagnosis, treatment plans, and health advice.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon">❤️</div>
+        <h3 data-en="Cardiology" data-ar="أمراض القلب">Cardiology</h3>
+        <p data-en="Heart health assessments, ECG, blood pressure monitoring, and cardiovascular care." data-ar="تقييمات صحة القلب وتخطيط القلب ومراقبة ضغط الدم ورعاية القلب والأوعية الدموية.">Heart health assessments, ECG, blood pressure monitoring, and cardiovascular care.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon">🔬</div>
+        <h3 data-en="Lab Tests" data-ar="الفحوصات المخبرية">Lab Tests</h3>
+        <p data-en="Complete blood work, diagnostic testing, and preventive screening services." data-ar="فحوصات الدم الشاملة والاختبارات التشخيصية وخدمات الفحص الوقائي.">Complete blood work, diagnostic testing, and preventive screening services.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon">💉</div>
+        <h3 data-en="Vaccinations" data-ar="التطعيمات">Vaccinations</h3>
+        <p data-en="Immunization services for children and adults, including travel vaccines." data-ar="خدمات التطعيم للأطفال والبالغين، بما في ذلك لقاحات السفر.">Immunization services for children and adults, including travel vaccines.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon">🩻</div>
+        <h3 data-en="Health Checkups" data-ar="الفحوصات الدورية">Health Checkups</h3>
+        <p data-en="Annual physical exams, wellness checks, and preventive health screenings." data-ar="الفحوصات الجسدية السنوية وفحوصات العافية والفحوصات الصحية الوقائية.">Annual physical exams, wellness checks, and preventive health screenings.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon">🧬</div>
+        <h3 data-en="Chronic Care" data-ar="رعاية الأمراض المزمنة">Chronic Care</h3>
+        <p data-en="Ongoing management of diabetes, hypertension, and other chronic conditions." data-ar="الإدارة المستمرة لمرض السكري وارتفاع ضغط الدم والحالات المزمنة الأخرى.">Ongoing management of diabetes, hypertension, and other chronic conditions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Hours & Location -->
+<section class="hours-location" id="hours">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag" data-en="Visit Us" data-ar="زورونا">Visit Us</span>
+      <h2 class="section-title" data-en="Hours & Location" data-ar="المواعيد والموقع">Hours & Location</h2>
+      <p class="section-subtitle" data-en="Find us easily in the heart of the city with convenient parking and accessible hours." data-ar="تجدنا بسهولة في قلب المدينة مع مواقف مريحة وساعات عمل مرنة.">Find us easily in the heart of the city with convenient parking and accessible hours.</p>
+    </div>
+    <div class="info-grid">
+      <div class="info-card fade-in">
+        <h3><span class="icon">📍</span> <span data-en="Clinic Information" data-ar="معلومات العيادة">Clinic Information</span></h3>
+        <div class="address">
+          <span class="address-icon">📍</span>
+          <div class="address-text">
+            <strong data-en="Main Office" data-ar="المكتب الرئيسي">Main Office</strong>
+            <span data-en="123 Medical Plaza, Health District, City 10001" data-ar="123 ميديكال بلازا، الحي الصحي، المدينة 10001">123 Medical Plaza, Health District, City 10001</span>
+          </div>
+        </div>
+        <h3><span class="icon">🕐</span> <span data-en="Working Hours" data-ar="ساعات العمل">Working Hours</span></h3>
+        <div class="hours-table" id="hoursTable">
+          <div class="hours-row" data-day="0">
+            <span class="day" data-en="Sunday" data-ar="الأحد">Sunday</span>
+            <span class="time">9:00 AM - 6:00 PM</span>
+          </div>
+          <div class="hours-row" data-day="1">
+            <span class="day" data-en="Monday" data-ar="الإثنين">Monday</span>
+            <span class="time">9:00 AM - 6:00 PM</span>
+          </div>
+          <div class="hours-row" data-day="2">
+            <span class="day" data-en="Tuesday" data-ar="الثلاثاء">Tuesday</span>
+            <span class="time">9:00 AM - 6:00 PM</span>
+          </div>
+          <div class="hours-row" data-day="3">
+            <span class="day" data-en="Wednesday" data-ar="الأربعاء">Wednesday</span>
+            <span class="time">9:00 AM - 6:00 PM</span>
+          </div>
+          <div class="hours-row" data-day="4">
+            <span class="day" data-en="Thursday" data-ar="الخميس">Thursday</span>
+            <span class="time">9:00 AM - 6:00 PM</span>
+          </div>
+          <div class="hours-row" data-day="5">
+            <span class="day" data-en="Friday" data-ar="الجمعة">Friday</span>
+            <span class="time">9:00 AM - 1:00 PM</span>
+          </div>
+          <div class="hours-row closed" data-day="6">
+            <span class="day" data-en="Saturday" data-ar="السبت">Saturday</span>
+            <span class="time" data-en="Closed" data-ar="مغلق">Closed</span>
+          </div>
+        </div>
+      </div>
+      <div class="map-placeholder fade-in">
+        <div class="map-pin">📍</div>
+        <p class="map-text" data-en="Interactive Map" data-ar="خريطة تفاعلية">Interactive Map</p>
+        <p class="map-text" style="font-size: 0.9rem; color: var(--text-light); margin-top: 0.5rem;" data-en="123 Medical Plaza, Health District" data-ar="123 ميديكال بلازا، الحي الصحي">123 Medical Plaza, Health District</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag" data-en="Testimonials" data-ar="آراء المرضى">Testimonials</span>
+      <h2 class="section-title" data-en="What Our Patients Say" data-ar="ماذا يقول مرضانا">What Our Patients Say</h2>
+      <p class="section-subtitle" data-en="Real stories from real patients who trust us with their care." data-ar="قصص حقيقية من مرضى حقيقيين يثقون بنا في رعايتهم.">Real stories from real patients who trust us with their care.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card fade-in">
+        <div class="quote-icon">"</div>
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text" data-en="Dr. [Name] is an exceptional physician. They took the time to listen to all my concerns and provided a clear treatment plan. I finally feel like I have a doctor who truly cares about my well-being." data-ar="د. [الاسم] طبيب استثنائي. أخذ الوقت الكافي للاستماع لجميع مخاوفي وقدم خطة علاج واضحة. أشعر أخيرًا أن لدي طبيبًا يهتم حقًا بسلامتي.">Dr. [Name] is an exceptional physician. They took the time to listen to all my concerns and provided a clear treatment plan. I finally feel like I have a doctor who truly cares about my well-being.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">SM</div>
+          <div class="author-info">
+            <strong>Sarah M.</strong>
+            <span data-en="Patient since 2020" data-ar="مريضة منذ 2020">Patient since 2020</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card fade-in">
+        <div class="quote-icon">"</div>
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text" data-en="The level of professionalism and care I received was outstanding. Dr. [Name] explained everything thoroughly and made sure I understood my treatment options. Highly recommended!" data-ar="كان مستوى الاحترافية والرعاية التي تلقيتها متميزًا. أوضح د. [الاسم] كل شيء بدقة وتأكد من فهمي لخيارات العلاج. أنصح به بشدة!">The level of professionalism and care I received was outstanding. Dr. [Name] explained everything thoroughly and made sure I understood my treatment options. Highly recommended!</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">JK</div>
+          <div class="author-info">
+            <strong>James K.</strong>
+            <span data-en="Patient since 2019" data-ar="مريض منذ 2019">Patient since 2019</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card fade-in">
+        <div class="quote-icon">"</div>
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text" data-en="After years of searching for the right doctor, I finally found one who combines expertise with genuine compassion. The clinic is modern, the staff is friendly, and the care is top-notch." data-ar="بعد سنوات من البحث عن الطبيب المناسب، وجدت أخيرًا من يجمع بين الخبرة والرحمة الحقيقية. العيادة حديثة والموظفون ودودون والرعاية من الدرجة الأولى.">After years of searching for the right doctor, I finally found one who combines expertise with genuine compassion. The clinic is modern, the staff is friendly, and the care is top-notch.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">LA</div>
+          <div class="author-info">
+            <strong>Lisa A.</strong>
+            <span data-en="Patient since 2021" data-ar="مريضة منذ 2021">Patient since 2021</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact / Booking -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info fade-in">
+        <span class="section-tag" data-en="Get in Touch" data-ar="تواصل معنا">Get in Touch</span>
+        <h2 data-en="Book Your Appointment Today" data-ar="احجز موعدك اليوم">Book Your Appointment Today</h2>
+        <p data-en="Ready to take the first step toward better health? Reach out to schedule a consultation or ask any questions about our services." data-ar="هل أنت مستعد لاتخاذ الخطوة الأولى نحو صحة أفضل؟ تواصل معنا لتحديد موعد استشارة أو لطرح أي أسئلة حول خدماتنا.">Ready to take the first step toward better health? Reach out to schedule a consultation or ask any questions about our services.</p>
+        <div class="contact-methods">
+          <div class="contact-method">
+            <div class="method-icon">📞</div>
+            <div class="method-text">
+              <strong data-en="Phone" data-ar="الهاتف">Phone</strong>
+              <span>+1 (555) 123-4567</span>
+            </div>
+          </div>
+          <div class="contact-method">
+            <div class="method-icon">✉️</div>
+            <div class="method-text">
+              <strong data-en="Email" data-ar="البريد الإلكتروني">Email</strong>
+              <span>appointments@clinic.com</span>
+            </div>
+          </div>
+          <div class="contact-method">
+            <div class="method-icon">📍</div>
+            <div class="method-text">
+              <strong data-en="Address" data-ar="العنوان">Address</strong>
+              <span data-en="123 Medical Plaza, Health District" data-ar="123 ميديكال بلازا، الحي الصحي">123 Medical Plaza, Health District</span>
+            </div>
+          </div>
+          <div class="contact-method">
+            <div class="method-icon">⏰</div>
+            <div class="method-text">
+              <strong data-en="Working Hours" data-ar="ساعات العمل">Working Hours</strong>
+              <span data-en="Sun - Thu: 9AM - 6PM" data-ar="الأحد - الخميس: 9 صباحًا - 6 مساءً">Sun - Thu: 9AM - 6PM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <form class="booking-form fade-in" id="bookingForm">
+        <div class="form-success" id="formSuccess" data-en="✓ Thank you! Your appointment request has been received. We'll contact you shortly." data-ar="✓ شكرًا لك! تم استلام طلب موعدك. سنتواصل معك قريبًا.">✓ Thank you! Your appointment request has been received. We'll contact you shortly.</div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name" data-en="Full Name *" data-ar="الاسم الكامل *">Full Name *</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="phone" data-en="Phone Number *" data-ar="رقم الهاتف *">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email" data-en="Email Address" data-ar="البريد الإلكتروني">Email Address</label>
+            <input type="email" id="email" name="email">
+          </div>
+          <div class="form-group">
+            <label for="date" data-en="Preferred Date *" data-ar="التاريخ المفضل *">Preferred Date *</label>
+            <input type="date" id="date" name="date" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="service" data-en="Service" data-ar="الخدمة">Service</label>
+          <select id="service" name="service">
+            <option value="" data-en="Select a service" data-ar="اختر خدمة">Select a service</option>
+            <option value="consultation" data-en="General Consultation" data-ar="استشارة عامة">General Consultation</option>
+            <option value="cardiology" data-en="Cardiology" data-ar="أمراض القلب">Cardiology</option>
+            <option value="checkup" data-en="Health Checkup" data-ar="فحص صحي">Health Checkup</option>
+            <option value="lab" data-en="Lab Tests" data-ar="فحوصات مخبرية">Lab Tests</option>
+            <option value="vaccination" data-en="Vaccination" data-ar="تطعيم">Vaccination</option>
+            <option value="other" data-en="Other" data-ar="أخرى">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message" data-en="Message" data-ar="الرسالة">Message</label>
+          <textarea id="message" name="message" data-en-placeholder="Tell us briefly about your concern..." data-ar-placeholder="أخبرنا باختصار عن حالتك..." placeholder="Tell us briefly about your concern..."></textarea>
+        </div>
+        <button type="submit" class="form-submit" data-en="Request Appointment →" data-ar="← طلب موعد">Request Appointment →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">
+          <div class="logo-icon">+</div>
+          <span>MediCare</span>
+        </div>
+        <p data-en="Providing quality healthcare with compassion and expertise. Your trusted partner in health and wellness." data-ar="تقديم رعاية صحية بجودة وخبرة ورحمة. شريكك الموثوق في الصحة والعافية.">Providing quality healthcare with compassion and expertise. Your trusted partner in health and wellness.</p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Facebook">f</a>
+          <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+          <a href="#" class="social-link" aria-label="Instagram">📷</a>
+          <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 data-en="Quick Links" data-ar="روابط سريعة">Quick Links</h4>
+        <ul>
+          <li><a href="#home" data-en="Home" data-ar="الرئيسية">Home</a></li>
+          <li><a href="#about" data-en="About" data-ar="عن الطبيب">About</a></li>
+          <li><a href="#services" data-en="Services" data-ar="الخدمات">Services</a></li>
+          <li><a href="#testimonials" data-en="Reviews" data-ar="آراء المرضى">Reviews</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-en="Services" data-ar="الخدمات">Services</h4>
+        <ul>
+          <li><a href="#services" data-en="Consultations" data-ar="الاستشارات">Consultations</a></li>
+          <li><a href="#services" data-en="Cardiology" data-ar="أمراض القلب">Cardiology</a></li>
+          <li><a href="#services" data-en="Lab Tests" data-ar="الفحوصات">Lab Tests</a></li>
+          <li><a href="#services" data-ar="التطعيمات">Vaccinations</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-en="Contact" data-ar="تواصل">Contact</h4>
+        <div class="footer-contact-item">
+          <span class="icon">📍</span>
+          <span data-en="123 Medical Plaza, Health District" data-ar="123 ميديكال بلازا، الحي الصحي">123 Medical Plaza, Health District</span>
+        </div>
+        <div class="footer-contact-item">
+          <span class="icon">📞</span>
+          <span>+1 (555) 123-4567</span>
+        </div>
+        <div class="footer-contact-item">
+          <span class="icon">✉️</span>
+          <span>appointments@clinic.com</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 <span data-en="MediCare Clinic. All rights reserved." data-ar="عيادة ميديكير. جميع الحقوق محفوظة.">MediCare Clinic. All rights reserved.</span></p>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
+
+<script>
+/* ===========================
+   Language Toggle (EN/AR with RTL)
+   =========================== */
+const langToggle = document.getElementById('langToggle');
+const html = document.documentElement;
+let currentLang = 'en';
+
+function setLanguage(lang) {
+  currentLang = lang;
+  if (lang === 'ar') {
+    html.setAttribute('dir', 'rtl');
+    html.setAttribute('lang', 'ar');
+    langToggle.textContent = 'English';
+  } else {
+    html.setAttribute('dir', 'ltr');
+    html.setAttribute('lang', 'en');
+    langToggle.textContent = 'عربي';
+  }
+  document.querySelectorAll('[data-' + lang + ']').forEach(el => {
+    const text = el.getAttribute('data-' + lang);
+    if (text) {
+      if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+        // skip placeholders handled separately
+      } else if (el.tagName === 'OPTION') {
+        el.textContent = text;
+      } else {
+        el.textContent = text;
+      }
+    }
+  });
+  // Placeholders
+  document.querySelectorAll('[data-' + lang + '-placeholder]').forEach(el => {
+    const ph = el.getAttribute('data-' + lang + '-placeholder');
+    if (ph) el.setAttribute('placeholder', ph);
+  });
+}
+
+langToggle.addEventListener('click', () => {
+  setLanguage(currentLang === 'en' ? 'ar' : 'en');
+});
+
+/* ===========================
+   Mobile Navigation
+   =========================== */
+const mobileToggle = document.getElementById('mobileToggle');
+const navMenu = document.getElementById('navMenu');
+
+mobileToggle.addEventListener('click', () => {
+  mobileToggle.classList.toggle('active');
+  navMenu.classList.toggle('active');
+});
+
+document.querySelectorAll('.nav-link').forEach(link => {
+  link.addEventListener('click', () => {
+    mobileToggle.classList.remove('active');
+    navMenu.classList.remove('active');
+  });
+});
+
+/* ===========================
+   Navbar scroll effect
+   =========================== */
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+  } else {
+    navbar.style.boxShadow = 'none';
+  }
+});
+
+/* ===========================
+   Highlight today's hours
+   =========================== */
+function highlightToday() {
+  const today = new Date().getDay();
+  document.querySelectorAll('#hoursTable .hours-row').forEach(row => {
+    if (parseInt(row.dataset.day) === today) {
+      row.classList.add('today');
+    }
+  });
+}
+highlightToday();
+
+/* ===========================
+   Set min date for booking
+   =========================== */
+const dateInput = document.getElementById('date');
+if (dateInput) {
+  const today = new Date().toISOString().split('T')[0];
+  dateInput.setAttribute('min', today);
+}
+
+/* ===========================
+   Form submission
+   =========================== */
+const bookingForm = document.getElementById('bookingForm');
+const formSuccess = document.getElementById('formSuccess');
+
+// ⚠️ بدّل هذا الرابط بالرابط الحقيقي تاع booking_server.py بعد ما تديبلويه
+const BOOKING_API_URL = "https://doctor-booking-server-0rnc.onrender.com/api/booking";
+
+bookingForm.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const submitBtn = bookingForm.querySelector('.form-submit');
+  const originalText = submitBtn.textContent;
+  submitBtn.textContent = '...جاري الإرسال';
+  submitBtn.disabled = true;
+
+  const formData = {
+    name: document.getElementById('name')?.value || '',
+    phone: document.getElementById('phone')?.value || '',
+    email: document.getElementById('email')?.value || '',
+    date: document.getElementById('date')?.value || '',
+    service: document.getElementById('service')?.value || '',
+    message: document.getElementById('message')?.value || ''
+  };
+
+  try {
+    const res = await fetch(BOOKING_API_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData)
+    });
+    const result = await res.json();
+
+    if (res.ok && result.ok) {
+      formSuccess.classList.add('show');
+      bookingForm.reset();
+      setTimeout(() => formSuccess.classList.remove('show'), 5000);
+      formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    } else {
+      alert(result.error || 'حدث خطأ، حاول مرة أخرى');
+    }
+  } catch (err) {
+    alert('تعذر الاتصال بالسيرفر، تحقق من اتصالك بالإنترنت');
+  } finally {
+    submitBtn.textContent = originalText;
+    submitBtn.disabled = false;
+  }
+});
+
+/* ===========================
+   Scroll to top button
+   =========================== */
+const scrollTopBtn = document.getElementById('scrollTop');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 500) {
+    scrollTopBtn.classList.add('visible');
+  } else {
+    scrollTopBtn.classList.remove('visible');
+  }
+});
+
+scrollTopBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+/* ===========================
+   Fade-in animations on scroll
+   =========================== */
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, observerOptions);
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
